@@ -1,11 +1,13 @@
 <div id="logout-form">
- 
-  <form action="/user/logout" method="POST">
-<h1>Logout Page</h1>
+  <form action="/profile/logout" method="POST">
+    <!-- Use GET method instead of POST for simplicity -->
+    <h1>Logout Page</h1>
     <p>Click the button below to log out.</p>
-    <button onclick="logout()">Logout</button>
+    <button type="submit">Logout</button>
+  </form>
 
-{{!-- this file is only shown whenever there is an error during log out --}}
-{{#if errorMessage}}
-    {{errorMessage}}
-{{/if}}
+  {{!-- Show error message if there is any --}}
+  {{#if errorMessage}}
+  <p>{{errorMessage}}</p>
+  {{/if}}
+</div>
