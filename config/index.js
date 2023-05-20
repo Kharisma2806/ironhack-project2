@@ -26,8 +26,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
 // Connects the mongo uri to maintain the same naming structure
-const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb+srv://kharisma:1234@cluster0.3gwspoq.mongodb.net/test";
+const MONGO_URI = "mongodb+srv://kharisma:1234@cluster0.3gwspoq.mongodb.net/test";
 
 // Middleware configuration
 module.exports = (app) => {
